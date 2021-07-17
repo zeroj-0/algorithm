@@ -42,6 +42,7 @@ public class ArrayExam {
             }
         }
 
+        System.out.println();
 
     }
 }
