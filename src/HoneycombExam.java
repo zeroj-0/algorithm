@@ -32,6 +32,15 @@ public class HoneycombExam {
         //두번째 6
         //세번째 6+6
         //네번째 6+6+6
+        // min = 1
+        // max = 1
+
+        // min 2
+        // max 7
+
+        // min 8
+        // max 19
+
 
 
         //마지막 숫자가 홀수이면 일자로
