@@ -26,7 +26,6 @@ public class NumberCountExam {
         for (int i=0;i<finalNumber.length();i++){
             finalNumberArray[i] = finalNumber.substring(i,i+1);
         }
-        System.out.println(Arrays.toString(finalNumberArray));
 
         String[] str= new String[]{"0","1","2","3","4","5","6","7","8","9"};
         //0인 배열 만들어주기
@@ -34,7 +33,6 @@ public class NumberCountExam {
         for (int i=0;i<10;i++){
             zeroArray.add(0);
         }
-        System.out.println(zeroArray);
         int count = 0;
 
 
@@ -42,14 +40,14 @@ public class NumberCountExam {
         for (int i=0;i<str.length;i++){
             for (int j=0;j<finalNumber.length();j++){
                 if (finalNumberArray[j].equals(str[i])){
-                    count++;
+                    count=zeroArray.get(i)+1;
                     zeroArray.set(i,count);
                 }
             }
         }
-        System.out.println(zeroArray);
-
-
+        for (int i=0;i<zeroArray.size();i++) {
+            System.out.printf(String.valueOf(zeroArray.get(i))+"\n");
+        }
 
     }
 }
