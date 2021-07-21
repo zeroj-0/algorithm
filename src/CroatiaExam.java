@@ -14,27 +14,28 @@ public class CroatiaExam {
         for (int i=0;i<alphabetArray.length;i++){
             alphabetArray[i] = (char)('a'+i);
         }
-        List<String[]> numberCount = new ArrayList<>();
+        List<String> numberCount = new ArrayList<>();
 
         //크로아티아 문자열 받음
         Scanner sc = new Scanner(System.in);
         String alphabet = sc.nextLine();
 
         int count = 0;
-        int num = 0;
+        int count2 = 0;
         for (int i=0;i<croatia.length;i++){
             if (alphabet.contains(croatia[i])){
                 count++;
-                numberCount.add(alphabet.split(croatia[i]));
+                String str = alphabet.replace(croatia[i],"");
+                numberCount.add(str);
             }
         }
         for (int i=0;i<numberCount.size();i++){
             for (int j=0;j<alphabetArray.length;j++){
                 if (numberCount.get(i).equals(alphabetArray[j])){
-                    num++;
+                    count2++;
                 }
             }
         }
-        System.out.println(count+num);
+        System.out.println(count+count2);
     }
 }
