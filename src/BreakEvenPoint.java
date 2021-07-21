@@ -17,7 +17,6 @@ public class BreakEvenPoint {
         int variableCost = sc.nextInt(); // 노트북 하나 팔면 나오는 코스트.
         int notebookPrice = sc.nextInt(); // 노트북 팔면 생기는 수입
 
-
         // 노트북 하나 팔면 발생하는 비용 그리고 수입
         // variableCost >= notebookPrice --> -1
 
