@@ -12,6 +12,8 @@ public class Pluscycle {
         int loopCount = 0; // 몇 번 돌았는지 저장. 0 -> 처음 도는건 0
         NumberController numberController = new NumberController();
 
+        //do-while : 조건이 true일 경우 실행, false인 경우 종료(미실행)
+        //무조건 한번 실행시킨 후 조건을 검사하여 반복을 결정
         do {
             loopCount++;
             newNumber = numberController.control(newNumber);
@@ -19,7 +21,26 @@ public class Pluscycle {
 
         System.out.println("loopCount = " + loopCount);
 
-        //N의 사이클 길이 출력
+
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        int num = scan.nextInt();
+//        int temp = num;
+//        int count = 0;
+//
+//        while(true) {
+//            int left = temp / 10;
+//            int right = temp % 10;
+//            temp = right * 10 + (left + right) % 10;
+//            count++;
+//            if(num == temp) {
+//                break;
+//            }
+//        }
+//
+//        System.out.println(count);
+
     }
 
 }
