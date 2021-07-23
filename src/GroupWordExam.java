@@ -27,28 +27,22 @@ public class GroupWordExam {
     }
 
     private static boolean isGroupWord(String word) {
-        String[] characterArray = new String[word.length()];
         Set<String> set = new HashSet<>();
-        for (int i = 0; i < word.length(); i++) {
-            characterArray[i] = word.substring(i, i + 1);
-        }
-        // set = {h, a, p}
-        // h a p p y
-        // ^     ^
-        //       o o
+
         for (int i = 0; i < word.length() - 1; i++) {
-            if (!characterArray[i].equals(characterArray[i+1])){
-                if (set.contains(characterArray[i])) {
+            if (!getCharacterFromWord(word,i).equals(getCharacterFromWord(word,i+1))){
+                if (set.contains(getCharacterFromWord(word,i))) {
                     return false;
                 }
-                set.add(characterArray[i]);
+                set.add(getCharacterFromWord(word, i));
             }
         }
 
-        if (set.contains(characterArray[word.length()-1])) {
-            return false;
-        }
-        return true;
+        return !set.contains(getCharacterFromWord(word, word.length() - 1));
+    }
+
+    private static String getCharacterFromWord(String word, int position) {
+        return word.substring(position, position + 1);
     }
 }
 
