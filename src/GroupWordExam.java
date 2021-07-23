@@ -1,4 +1,6 @@
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class GroupWordExam {
     public static void main(String[] args) {
@@ -12,10 +14,43 @@ public class GroupWordExam {
         }
 
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
+        int N = Integer.parseInt(sc.nextLine());
+        int groupWordCount = 0;
 
-        for (int i=0;i<N;i++){
-            String str = sc.nextLine();
+        for (int testCase = 0; testCase < N; testCase++) {
+            String word = sc.nextLine();
+            if (isGroupWord(word)) {
+                groupWordCount++;
+            }
         }
+        System.out.println("groupWordCount = " + groupWordCount);
+    }
+
+    private static boolean isGroupWord(String word) {
+        String[] characterArray = new String[word.length()];
+        Set<String> set = new HashSet<>();
+        for (int i = 0; i < word.length(); i++) {
+            characterArray[i] = word.substring(i, i + 1);
+        }
+        // set = {h, a, p}
+        // h a p p y
+        // ^     ^
+        //       o o
+        for (int i = 0; i < word.length() - 1; i++) {
+            if (!characterArray[i].equals(characterArray[i+1])){
+                if (set.contains(characterArray[i])) {
+                    return false;
+                }
+                set.add(characterArray[i]);
+            }
+        }
+
+        if (set.contains(characterArray[word.length()-1])) {
+            return false;
+        }
+        return true;
     }
 }
+
+
+
