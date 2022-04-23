@@ -33,7 +33,7 @@ public class AgeSort {
 
         /**       Map<Integer, String> ageName = new HashMap<>();
          //        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-         key는 중복될 수 있어서 안됨
+         key는 중복될 수 없어서 안됨
          for (int i=0;i<N;i++){
 
          int Age = scanner.nextInt();
