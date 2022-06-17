@@ -2,9 +2,10 @@ package swprogramming;
 
 public class Libary {
 
+    private static Libary libary = new Libary();
 
-    private static Libary getInstance() {
-        return new Libary();
+    public static Libary getInstance() {
+        return libary;
     }
 
     public void addBook(Book book) {
