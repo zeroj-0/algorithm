@@ -1,4 +1,4 @@
-package com.varxyz.banking.domain;
+package domain;
 
 import java.util.*;
 
@@ -66,7 +66,9 @@ public class Customer {
 	public void setMyAccount(Account account) {
 		myAccount.add(account);
 	}
-	
-	
+
+	public List<Account> getMyAccountList() {
+		return myAccount;
+	}
 	
 }

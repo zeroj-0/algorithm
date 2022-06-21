@@ -1,13 +1,19 @@
-package com.varxyz.banking.domain;
+package domain;
 
 import java.util.*;
 
 public class AccountServiceImpl implements AccountService {
+	private static AccountService accountService = new AccountServiceImpl();
+
 	private List<Account> accountList = new ArrayList<Account>();
 	private CustomerService customerService;
 	
 	public AccountServiceImpl() {
 		customerService = new CustomerServiceImpl();
+	}
+
+	public static AccountService getInstance() {
+		return accountService;
 	}
 	
 	// option! 객체 만들어주는 메소드 (반복할필요x, main가서 객체생성할 필요 없이 메소드로 !)
@@ -29,7 +35,7 @@ public class AccountServiceImpl implements AccountService {
 	
 	public List<Account> getAccountBySsn(String ssn) {
 		Customer customerSsn = customerService.getCustomerBySsn(ssn);
-		
+		List<Account> cusList = customerSsn.getMyAccount();
 		
 		return null;
 	}

@@ -1,4 +1,4 @@
-package com.varxyz.banking.domain;
+package domain;
 
 //던지려고하는 예외는 꼭 확인되어야하니까 CheckedException인 Exception 사용
 

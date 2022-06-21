@@ -1,8 +1,10 @@
-package com.varxyz.banking.domain;
+package domain;
 
 import java.util.*;
 
 public class CustomerServiceImpl implements CustomerService {
+
+	private static CustomerService customerService = new CustomerServiceImpl();
 	
 	private Map<String, Customer> map = new HashMap<String, Customer>();
 

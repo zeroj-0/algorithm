@@ -1,4 +1,4 @@
-package com.varxyz.banking.domain;
+package domain;
 
 import java.util.*;
 

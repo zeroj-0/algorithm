@@ -1,4 +1,4 @@
-package com.varxyz.banking.domain;
+package domain;
 
 /**
  * 콩나물0

@@ -1,4 +1,4 @@
-package com.varxyz.banking.domain;
+package domain;
 
 public class SavingsAccount extends Account {
 	private static final double DEFAULT_INTEREST_RATE= 0.03;
