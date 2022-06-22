@@ -9,7 +9,7 @@ public class AccountServiceImpl implements AccountService {
 	private CustomerService customerService;
 	
 	public AccountServiceImpl() {
-		customerService = new CustomerServiceImpl();
+		customerService = CustomerServiceImple.getInstance();
 	}
 
 	public static AccountService getInstance() {
@@ -35,9 +35,9 @@ public class AccountServiceImpl implements AccountService {
 	
 	public List<Account> getAccountBySsn(String ssn) {
 		Customer customerSsn = customerService.getCustomerBySsn(ssn);
-		List<Account> cusList = customerSsn.getMyAccount();
+		List<Account> cusList = customerSsn.getMyAccountList();
 		
-		return null;
+		return cusList;
 	}
 	
 	public Account getAccountByAccountNum(String accountNum) {
